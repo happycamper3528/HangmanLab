@@ -3,42 +3,42 @@
 # progress of guessing
 
 def draw_man(limbs)
-  if limbs == 0
+  if limbs == 1
     puts "    _"
     puts "  _|_|_"
-  elsif limbs == 1
-    puts "    _"
-    puts "  _|_|_"
-    puts "   ( )"
   elsif limbs == 2
     puts "    _"
     puts "  _|_|_"
     puts "   ( )"
-    puts "   /"
   elsif limbs == 3
     puts "    _"
     puts "  _|_|_"
     puts "   ( )"
-    puts "   /|"
+    puts "   /"
   elsif limbs == 4
     puts "    _"
     puts "  _|_|_"
     puts "   ( )"
-    puts "   /|\\"
+    puts "   /|"
   elsif limbs == 5
     puts "    _"
     puts "  _|_|_"
     puts "   ( )"
     puts "   /|\\"
-    puts "    |"
   elsif limbs == 6
     puts "    _"
     puts "  _|_|_"
     puts "   ( )"
     puts "   /|\\"
     puts "    |"
-    puts "   /"
   elsif limbs == 7
+    puts "    _"
+    puts "  _|_|_"
+    puts "   ( )"
+    puts "   /|\\"
+    puts "    |"
+    puts "   /"
+  elsif limbs == 8
     puts "    _"
     puts "  _|_|_"
     puts "   ( )"
@@ -82,7 +82,6 @@ end
 # increment body parts if letter is not in word
 # exit loop if you have won or lost
 
-
 word = ["d", "i", "n", "o", "s", "a", "u", "r"]
 
 bad_guesses = 0
@@ -100,3 +99,4 @@ while 0 == 0
   draw_man(bad_guesses)
   display_guess_progress(guesses)
 end
+
