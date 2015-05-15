@@ -1,7 +1,3 @@
-# display letters guessed
-
-# progress of guessing
-
 def draw_man(limbs)
   if limbs == 1
     puts "    _"
@@ -48,6 +44,7 @@ def draw_man(limbs)
   end
 end
 
+# Full Hangman:
 #    _
 #  _|_|_
 #   ( )
@@ -55,14 +52,6 @@ end
 #    |
 #   / \
 
-
-# 1. Go through each letter in the word
-#   2. if the letter guessed is in the word
-#     3. output the letter
-#   4. else
-#     5. output underscore
-
-# make this method work for any word
 def display_guess_progress(word, letters_guessed)
   word.each do |l|
     if letters_guessed.include?(l)
@@ -71,15 +60,6 @@ def display_guess_progress(word, letters_guessed)
     end
   end
 end
-
-# display_guess_progress(["a", "o"])
-
-# MAIN LOOP
-# draw everything
-# ask for letter
-# add letter to guesses
-# increment body parts if letter is not in word
-# exit loop if you have won or lost
 
 word = ["p","n","e","u","m","o","n","o","u","l","t","r","a","m","i","c","r","s","c","o","p","i","c","s","i","l","i","c","o","v","o","l","c","a","n","o","c","o","n","i","o","i","s"]
 
