@@ -63,8 +63,7 @@ end
 #     5. output underscore
 
 # make this method work for any word
-def display_guess_progress(letters_guessed)
-  word = ["d", "i", "n", "o", "s", "a", "u", "r"]
+def display_guess_progress(word, letters_guessed)
   word.each do |l|
     if letters_guessed.include?(l)
       print l
@@ -82,7 +81,7 @@ end
 # increment body parts if letter is not in word
 # exit loop if you have won or lost
 
-word = ["d", "i", "n", "o", "s", "a", "u", "r"]
+word = ["p","n","e","u","m","o","n","o","u","l","t","r","a","m","i","c","r","s","c","o","p","i","c","s","i","l","i","c","o","v","o","l","c","a","n","o","c","o","n","i","o","i","s"]
 
 bad_guesses = 0
 
@@ -97,6 +96,20 @@ while 0 == 0
     bad_guesses = bad_guesses + 1
   end
   draw_man(bad_guesses)
-  display_guess_progress(guesses)
+  display_guess_progress(word, guesses)
 end
 
+# Win Condition
+all_letters_in_word = true
+
+word.each do |letter|
+  if guesses.include?(letter)
+    puts all_letters_in_word
+    puts "You Win!"
+  end
+end
+
+# Lose Condition
+if bad_guesses >= 8
+  puts "You Lose!"
+end
